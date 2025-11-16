@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Ventas</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <div id="loader" class="loader-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="dashboard-container">
+        
+        <header>
+            <h1>Sales Dashboard</h1>
+            <p>----------</p>
+        </header>
+
+        <section class="kpi-container">
+            <div class="kpi-box" id="kpi-1">
+                </div>
+            <div class="kpi-box" id="kpi-2">
+                </div>
+        </section>
+
+        <main class="charts-container">
+            <div class="chart-box" id="chart-1">
+                </div>
+            <div class="chart-box" id="chart-2">
+                </div>
+            <div class="chart-box" id="chart-3">
+                </div>
+            <div class="chart-box" id="chart-4">
+                </div>
+            <div class="chart-box" id="chart-5">
+                </div>
+        </main>
+
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <script src="scripts/kpis.js"></script>
+    <script src="scripts/total_by_cat.js"></script>
+    <script src="scripts/total_by_region.js"></script>
+    <script src="scripts/top_by_region.js"></script>
+    <script src="scripts/monthly_sales.js"></script>
+    <script src="scripts/profit_by_cat.js"></script>
+
+    <script src="scripts/dashboard.js"></script>
+
+</body>
+</html>
