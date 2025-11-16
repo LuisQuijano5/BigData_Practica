@@ -1,23 +1,23 @@
 # Practica Competencia 2
 
-**Alumno:** *[Luis Angel Quijano Guerrero]*  
-**Materia:** *[BigData]*  
-**Fecha:** *[15/11/2025]*  
+Luis Angel Quijano Guerrero  
+**Materia:** BigData 
+**Fecha:** 15/11/2025
 
 ---
 
 ## Descripción General
 
-Esta practica implementa un flujo completo **ETL** utilizando servicios de AWS, con el objetivo de procesar datos de ventas, generar transformaciones analíticas y exponer la información mediante una **API REST** y un **Dashboard web** construido con D3.js.
+Esta practica implementa un flujo completo **ETL** utilizando servicios de AWS, con el objetivo de procesar datos de ventas, generar transformaciones analíticas y exponer la información mediante una **API REST** y un **Dashboard web** construido con D3.
 
 El flujo incluye:
 
 - Extracción del dataset original desde **Amazon S3**
 - Uso de **AWS Glue Crawler**
-- Transformaciones con **AWS Glue ETL (Notebooks)**
+- Transformaciones con **AWS Glue ETL**
 - Carga a **tablas DynamoDB**
 - Exposición de datos mediante **AWS Lambda + API Gateway**
-- Visualización usando **un Dashboard interactivo con D3.js**
+- Visualización usando **un Dashboard interactivo con D3**
 
 ---
 
@@ -59,7 +59,7 @@ El flujo incluye:
 
 El Glue Notebook ejecuta:
 
-- **Limpieza y estandarización**:
+- **Limpieza y estandarización (de la practica previa)**:
   - Campos en mayúsculas/minúsculas.
   - Eliminación de nulos.
 
@@ -73,12 +73,12 @@ El Glue Notebook ejecuta:
   - Cantidad vendida
   - Número de ventas únicas
 
-- **Top 5 productos por región** → tabla `top_products_by_region`
+- **Top 5 productos por región** -> tabla `top_products_by_region`
 
-- **Ventas mensuales** → tabla `monthly_sales`
+- **Ventas mensuales** -> tabla `monthly_sales`
 
 - **KPIs**:
-  - `total_sales_amount`
+  - `total_sales`
   - `avg_sale_amount`
 
 ---
