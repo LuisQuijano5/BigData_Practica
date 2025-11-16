@@ -20,23 +20,24 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     Promise.all(promises)
-        .then(data => {
-            const kpiData = JSON.parse(results[0].body);
+        .then(results => {
+            const kpiData = results[0].kpis;
             const monthlySalesData = JSON.parse(results[1].body);
             const summaryData = JSON.parse(results[2].body);
             const topProductsData = JSON.parse(results[3].body);
 
             console.log("Datos de KPI:", kpiData);
             console.log("Datos de Ventas Mensuales:", monthlySalesData);
-            console.log("Datos de Resumen (Summary):", summaryData);
+            console.log("Datos de Resumen:", summaryData);
             console.log("Datos de Top Productos:", topProductsData);
             
-            renderKPIs(parsedData);
-            renderTotalByRegion(parsedData, "#chart-1");
-            renderTotalByCat(parsedData, "#chart-2");
-            renderTopByRegion(parsedData, "#chart-3");
-            renderProfitByCat(parsedData, "#chart-4");
-            renderMonthlySales(parsedData, "#chart-5");
+            renderKPIs(kpiData);
+            renderTotalByRegion(summaryData, "#chart-1");
+            renderTotalByCat(summaryData, "#chart-2");
+            renderTopByRegion(topProductsData, "#chart-3");
+            renderProfitByCat(summaryData, "#chart-4");
+            renderMonthlySales(monthlySalesData, "#chart-5");
+            renderHeatMap(summaryData, "#chart-6");
 
         })
         .catch(error => {

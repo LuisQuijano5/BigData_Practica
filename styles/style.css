@@ -136,3 +136,140 @@ header p {
         transform: rotate(360deg);
     }
 }
+
+
+
+
+
+
+/* 
+CHARTS
+*/
+.axis .domain {
+    stroke: var(--accent-color); 
+}
+.axis .tick line {
+    stroke: var(--accent-color); 
+}
+.axis .tick text {
+    fill: var(--secondary-text); 
+    font-size: 0.9em;
+}
+
+.axis-y-line .domain,
+.axis-y-line .tick line {
+    stroke: #ffc107; 
+}
+.axis-y-line .tick text {
+    fill: #ffc107;
+}
+
+.chart-title {
+    fill: var(--primary-text);
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.axis-label {
+    fill: var(--secondary-text);
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+.bar {
+    transition: opacity 0.2s ease-in-out;
+}
+
+.d3-tooltip {
+    position: absolute; 
+    pointer-events: none;
+    background-color: rgba(26, 26, 46, 0.95); 
+    border: 1px solid var(--accent-color);
+    color: var(--primary-text);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    line-height: 1.4;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.2s;
+    max-width: 250px;
+}
+
+.d3-tooltip hr {
+    border: none;
+    border-top: 1px solid var(--accent-color);
+    margin: 5px 0;
+}
+
+.d3-tooltip strong {
+    color: var(--highlight-color);
+    font-size: 1.1em;
+}
+
+
+
+
+.matrix-axis-label {
+    fill: var(--primary-text);
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.matrix-cell rect {
+    transition: all 0.2s ease-in-out;
+}
+.matrix-cell:hover rect {
+    transform: scale(1.03); 
+    box-shadow: 0 0 15px var(--highlight-color);
+}
+
+.matrix-text-product {
+    fill: #ffffff;
+    font-size: 1em;
+    font-weight: 600;
+    pointer-events: none; 
+}
+
+.matrix-text-quantity {
+    fill: #ffffff;
+    font-size: 0.9em;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+
+
+.heatmap-cell {
+    transition: all 0.1s ease-in-out;
+}
+
+.heatmap-label {
+    fill: #ffffff;
+    font-size: 0.8em;
+    font-weight: 500;
+    pointer-events: none; 
+    text-shadow: 0 0 3px rgba(0,0,0,0.7); 
+}
+
+.heatmap-axis-x .tick text,
+.heatmap-axis-y .tick text {
+    fill: var(--primary-text);
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.heatmap-cell-group rect {
+    transition: all 0.2s ease-in-out;
+}
+.heatmap-cell-group:hover rect {
+    transform: scale(1.03); 
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); 
+}
+
+.heatmap-value-text {
+    fill: #ffffff; 
+    font-size: 1em;
+    font-weight: 600;
+    pointer-events: none; 
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6); 
+}
